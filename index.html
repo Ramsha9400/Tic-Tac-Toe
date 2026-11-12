@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe Game | @stackanddstyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="game">
+      <button class="sound" id="sound" aria-label="Sound on" aria-pressed="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5L6 9H3v6h3l5 4z"/><path class="w" d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/><path class="m" d="M16 9l5 6M21 9l-5 6"/>
+        </svg>
+      </button>
+      <h1>Tic Tac Toe</h1>
+
+      <div class="seg-group" id="modes" role="group" aria-label="Game mode">
+        <button class="seg on" data-mode="pvp">2 Players</button>
+        <button class="seg" data-mode="cpu" id="cpuBtn">vs Computer</button>
+      </div>
+      <div class="seg-group small" id="levels" role="group" aria-label="Difficulty" hidden>
+        <button class="seg" data-level="easy">Easy</button>
+        <button class="seg on" data-level="hard">Hard</button>
+      </div>
+
+      <div class="score" aria-label="Scoreboard">
+        <div class="s x"><b id="sx">0</b><span id="lx">X wins</span></div>
+        <div class="s d"><b id="sd">0</b><span>Draws</span></div>
+        <div class="s o"><b id="so">0</b><span id="lo">O wins</span></div>
+      </div>
+
+      <p class="turn" id="turn" aria-live="polite"></p>
+
+      <div class="board" id="board"><button class="cell" data-i="0" aria-label="Row 1, column 1, empty"></button><button class="cell" data-i="1" aria-label="Row 1, column 2, empty"></button><button class="cell" data-i="2" aria-label="Row 1, column 3, empty"></button><button class="cell" data-i="3" aria-label="Row 2, column 1, empty"></button><button class="cell" data-i="4" aria-label="Row 2, column 2, empty"></button><button class="cell" data-i="5" aria-label="Row 2, column 3, empty"></button><button class="cell" data-i="6" aria-label="Row 3, column 1, empty"></button><button class="cell" data-i="7" aria-label="Row 3, column 2, empty"></button><button class="cell" data-i="8" aria-label="Row 3, column 3, empty"></button></div>
+
+      <div class="actions">
+        <button class="btn" id="restart">Restart</button>
+        <button class="btn ghost" id="reset">Reset score</button>
+      </div>
+      <p class="hint">Tip: press <kbd>1</kbd>-<kbd>9</kbd> to play, <kbd>R</kbd> to restart, <kbd>M</kbd> to mute</p>
+    </section>
+  </main>
+
+  <a class="credit" href="#">Created by <b>@stackanddstyle</b></a>
+  <script src="script.js"></script>
+</body>
+</html>
